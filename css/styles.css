@@ -21,34 +21,118 @@ p {
 }
 
 body {
+  height: 820px;
+    background-color: rgb(15, 15, 15);
+}
+
+.start-div {
+    margin: 200px auto;
+    text-align: center;
+    padding: 30px 0;
+    border-radius: 10px;
+   background-color: white; 
+    box-shadow: 0 0 15px -1px white;
+    width: 40%;
+    height: 33%;
+
+
+}
+
+.start-div p{
+    font-size: 40px;
+    font-weight: 800; 
+    color: rgb(221, 190, 15);
+}
+.butt2 {
+    font-size: 20px;
+    font-weight: 800;
+    background-color: goldenrod;
+    color: white;
+    margin: 10px 20px;
+    width: 40%;
+    height: 30%;
+
+    animation: turn 2s linear infinite;
+}
+@keyframes turn {
+    0% {
+    transform: rotateY(-100deg);
+    transform-origin: right center;
+        }
+
+    50% {
+        transform-origin: right center;
+        transform: rotateY(-50deg);
+    
+}
+    70% {
+        transform-origin: right center;
+        transform: rotateY(0deg);
+    
+}
+    100% {
+        transform-origin: right center;
+        transform: rotateY(0deg);
+    
+    }
+}
+
+
+
+.or{
+    padding-top: 40px;
     background-image: url(../img/download\ \(3\).jpg);
     background-size: 100%;
+    backface-visibility: calc(8);
     background-repeat: no-repeat;
-    height: 700px;
+    height: 100%;
     width: 100%;
-    background-color: rgb(230, 228, 228);
-}
-.main-cont{
-  
+
+    display: none;
 }
 .quest-box {
     display: flex;
     justify-content: right;
     align-items: flex-end;
-    margin: 200px auto;
+    margin: 150px auto;
     border-radius: 10px;
-    background: linear-gradient(60deg, rgb(236, 231, 231), white);
+    /* background: linear-gradient(60deg, rgb(236, 231, 231), white); */
     box-shadow: 0 0 20px 2px white;
     height: 470px;
-    width: 60%;
+    width: 80%;
 }
 
 .quest-div {
     border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 0 15px -1px black;
+    
+    box-shadow: 0 0 15px -1px white;
     width: 97%;
     height: 93%;
+
+    animation: turn 2s linear;
+}
+
+@keyframes turn {
+    0% {
+    transform: rotateY(-100deg);
+    transform-origin: right center;
+        }
+
+    50% {
+        transform-origin: right center;
+        transform: rotateY(-50deg);
+    
+}
+    70% {
+        transform-origin: right center;
+        transform: rotateY(0deg);
+    
+}
+    100% {
+        transform-origin: right center;
+        transform: rotateY(0deg);
+    
+    }
 }
 
 #count {
@@ -58,6 +142,7 @@ body {
     font-size: 25px;
     font-weight: 800;
     height: 30%;
+    color: white;
 }
 
 .label {
@@ -66,6 +151,7 @@ body {
     font-weight: 800;
     width: 100%;
     height: 60%;
+    border-radius: 20%;
     text-align: center;
     background-color: rgb(238, 236, 236);
 }
@@ -86,6 +172,8 @@ body {
     margin: 10px 20px;
     width: 20%;
     height: 40%;
+
+    display: none;
 }
 
 
@@ -104,11 +192,10 @@ button {
     font-size: 15px;
     font-weight: 900;
     width: 45%;
-    border-radius: 30px;
+    border-radius: 30%;
     border: none;
     background-color: white;
-    height: 35%;
-    box-shadow: 0 0 7px -1px black;
+    height: 38%;
 }
 
 .flex {
@@ -180,12 +267,18 @@ button {
 
 
 .correct {
+    opacity: 1;
+    color: black;
     transition: 1s ease-in-out;
+    box-shadow: 0 0 15px 2px white;
     background-color: rgb(165, 241, 66);
 }
 
 .wrong {
+    opacity: 1;
+    color: white;
     transition: 1s ease-in-out;
+    box-shadow: 0 0 10px 2px white;
     background-color: rgba(240, 17, 17, 0.397);
 }
 
@@ -203,3 +296,4 @@ button {
 .cont {
     display: none;
 }
+
