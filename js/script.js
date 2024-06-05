@@ -36,11 +36,13 @@ $(document).ready(function () {
         if (answer === "1") {
             $(".ans").eq(index).addClass("correct")
             $("#cash-count").val(addCash())
+            $("#next1").show()
         }
         else{
             $("#cash-count").val(removeCash())
             $(".ans").eq(0).addClass("correct")
             $(".ans").eq(index).addClass("wrong")
+            $("#next1").show()
         }
 
         $(".ans").prop("disabled", true);
@@ -53,11 +55,13 @@ $(document).ready(function () {
         if (answer === "3") {
             $(".ans2").eq(index).addClass("correct")
             $("#cash-count").val(addCash())
+            $("#next2").show()
         }
         else{
             $("#cash-count").val(removeCash())
             $(".ans2").eq(2).addClass("correct")
             $(".ans2").eq(index).addClass("wrong")
+            $("#next2").show()
         }
 
         $(".ans2").prop("disabled", true);
@@ -70,15 +74,18 @@ $(document).ready(function () {
         if (answer === "2") {
             $(".ans3").eq(index).addClass("correct")
             $("#cash-count").val(addCash())
+            $("#next3").show()
         }
         else{
             $("#cash-count").val(removeCash())
             $(".ans3").eq(1).addClass("correct")
             $(".ans3").eq(index).addClass("wrong")
+            $("#next3").show()
         }
 
         $(".ans3").prop("disabled", true);
     });
+
     $(".ans4").click(function () {
         let answer = $(this).val()
         let index = $(".ans4").index(this);
@@ -86,15 +93,18 @@ $(document).ready(function () {
         if (answer === "1") {
             $(".ans4").eq(index).addClass("correct")
             $("#cash-count").val(addCash())
+            $("#next4").show()
         }
         else{
             $("#cash-count").val(removeCash())
             $(".ans4").eq(0).addClass("correct")
             $(".ans4").eq(index).addClass("wrong")
+            $("#next4").show()
         }
 
         $(".ans4").prop("disabled", true);
     });
+
     $(".ans5").click(function () {
         let answer = $(this).val()
         let index = $(".ans5").index(this);
@@ -102,15 +112,18 @@ $(document).ready(function () {
         if (answer === "4") {
             $(".ans5").eq(index).addClass("correct")
             $("#cash-count").val(addCash())
+            $("#next5").show()
         }
         else{
             $("#cash-count").val(removeCash())
             $(".ans5").eq(3).addClass("correct")
             $(".ans5").eq(index).addClass("wrong")
+            $("#next5").show()
         }
 
         $(".ans5").prop("disabled", true);
     });
+
     $(".ans6").click(function () {
         let answer = $(this).val()
         let index = $(".ans6").index(this);
@@ -118,11 +131,13 @@ $(document).ready(function () {
         if (answer === "2") {
             $(".ans6").eq(index).addClass("correct")
             $("#cash-count").val(addCash())
+            $("#next6").show()
         }
         else{
             $("#cash-count").val(removeCash())
             $(".ans6").eq(1).addClass("correct")
             $(".ans6").eq(index).addClass("wrong")
+            $("#next6").show()
         }
 
         $(".ans6").prop("disabled", true);
@@ -135,11 +150,13 @@ $(document).ready(function () {
         if (answer === "3") {
             $(".ans7").eq(index).addClass("correct")
             $("#cash-count").val(addCash())
+            $("#next7").show()
         }
         else{
             $("#cash-count").val(removeCash())
             $(".ans7").eq(2).addClass("correct")
             $(".ans7").eq(index).addClass("wrong")
+            $("#next7").show()
         }
 
         $(".ans7").prop("disabled", true);
@@ -147,6 +164,8 @@ $(document).ready(function () {
 
     $(".butt").click(function () {
         let butNum = $(this).val()
+        $(".butt").hide();
+
 
         if ( butNum === "1") {
             $("#quest-div2").show();
