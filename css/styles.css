@@ -15,73 +15,224 @@ ul {
 
 li,
 a,
-p {
+p,
+button {
     text-decoration: none;
     list-style: none;
+    cursor: pointer;
 }
 
 body {
-  height: 820px;
-    background-color: rgb(15, 15, 15);
+    height: 820px;
+    background-color: black;
+}
+
+#start {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 300px 0;
+}
+
+#start P {
+    font-size: 40px;
+    font-weight: 800;
+    color: rgb(221, 190, 15);
+}
+
+#audio {
+    width: 13%;
+    margin: auto;
+}
+
+#audio p {
+    margin: auto;
+    color: black;
+    font-size: 25px;
+}
+
+#audio:hover audio {
+    display: block;
+}
+#audio2{
+display: none;
+}
+
+audio {
+    margin-left: -40px;
+    background-color: red;
+    
+}
+
+#timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 40px;
+    color: rgb(190, 240, 9);
+    font-size: 100px;
+    font-weight: 800;
 }
 
 .start-div {
-    margin: 200px auto;
+    margin: 200px auto 0;
     text-align: center;
     padding: 30px 0;
     border-radius: 10px;
-   background-color: white; 
+    background-color: white;
     box-shadow: 0 0 15px -1px white;
     width: 40%;
     height: 33%;
-
-
 }
 
-.start-div p{
+.start-div p {
     font-size: 40px;
-    font-weight: 800; 
-    color: rgb(221, 190, 15);
+    font-weight: 800;
 }
+
 .butt2 {
     font-size: 20px;
     font-weight: 800;
-    background-color: goldenrod;
+    background-color: rgb(155, 121, 37);
     color: white;
     margin: 10px 20px;
     width: 40%;
     height: 30%;
 
-    animation: turn 2s linear infinite;
+    animation: col 2s linear infinite;
 }
-@keyframes turn {
+
+.butt2:hover {
+    transition: 1s ease-in-out;
+    color: black;
+    background-color: rgba(155, 122, 37, 0.425);
+}
+
+@keyframes col {
     0% {
-    transform: rotateY(-100deg);
-    transform-origin: right center;
-        }
+        border: 5px solid gold;
+    }
+
+    25% {
+        border: 5px solid rgb(231, 226, 199);
+
+    }
 
     50% {
-        transform-origin: right center;
-        transform: rotateY(-50deg);
-    
-}
+        border: 5px solid gold;
+
+    }
+
     70% {
-        transform-origin: right center;
-        transform: rotateY(0deg);
-    
-}
+        border: 5px solid rgb(223, 221, 210);
+
+    }
+
     100% {
-        transform-origin: right center;
-        transform: rotateY(0deg);
-    
+        border: 5px solid gold;
     }
 }
 
+.show {
+    padding-top: 300px;
+    height: 100%;
+    width: 100%;
+
+    display: none;
+}
+
+.spin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 800;
+    height: 120px;
+    width: 120px;
+    margin: auto;
+    border-radius: 60px;
+    color: white;
+
+    animation: spin 4s linear forwards;
+}
 
 
-.or{
+@keyframes spin {
+    0% {
+
+        border-right: 5px solid red;
+    }
+
+    25% {
+
+        border-top: 5px solid red;
+    }
+
+    50% {
+
+        border-left: 5px solid red;
+    }
+
+    70% {
+
+        border-bottom: 5px solid rgb(24, 21, 199);
+    }
+
+    90% {
+
+        border: 2px solid red;
+    }
+
+    100% {
+
+        border: none;
+    }
+
+}
+
+.spin p {
+    opacity: 0;
+    animation: fadein 5s linear forwards;
+}
+
+@keyframes fadein {
+    0% {
+
+        opacity: 0;
+    }
+
+    25% {
+
+        opacity: 0;
+    }
+
+    50% {
+
+        opacity: 0;
+    }
+
+    70% {
+
+        opacity: 0;
+    }
+
+    90% {
+
+        opacity: 0;
+    }
+
+    100% {
+
+        opacity: 1;
+    }
+
+}
+
+.content-cont {
     padding-top: 40px;
-    background-image: url(../img/download\ \(3\).jpg);
+    background-image: url(../img/quastdark.jpg);
     background-size: 100%;
     backface-visibility: calc(8);
     background-repeat: no-repeat;
@@ -89,7 +240,83 @@ body {
     width: 100%;
 
     display: none;
+
+    animation: blur 1.5s linear forwards;
 }
+
+
+@keyframes blur {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    70% {
+
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+.himg {
+    margin: auto;
+    width: 30%;
+    height: 52%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+
+#end {
+    height: 400px;
+    display: none;
+}
+
+#endbut {
+    height: 20%;
+}
+
+#end p {
+    color: red;
+}
+
+#end .pp2 {
+    animation: 4s chn linear infinite;
+}
+
+@keyframes chn {
+    0% {
+        opacity: 1;
+        color: black;
+    }
+
+    50% {
+        opacity: 0;
+        color: red;
+    }
+
+    100% {
+        opacity: 1;
+        color: black;
+    }
+
+}
+
 .quest-box {
     display: flex;
     justify-content: right;
@@ -104,7 +331,7 @@ body {
 
 .quest-div {
     border-radius: 10px;
-    
+
     box-shadow: 0 0 15px -1px white;
     width: 97%;
     height: 93%;
@@ -114,24 +341,26 @@ body {
 
 @keyframes turn {
     0% {
-    transform: rotateY(-100deg);
-    transform-origin: right center;
-        }
+        transform: rotateY(-100deg);
+        transform-origin: right center;
+    }
 
     50% {
         transform-origin: right center;
         transform: rotateY(-50deg);
-    
-}
+
+    }
+
     70% {
         transform-origin: right center;
         transform: rotateY(0deg);
-    
-}
+
+    }
+
     100% {
         transform-origin: right center;
         transform: rotateY(0deg);
-    
+
     }
 }
 
@@ -176,6 +405,9 @@ body {
     display: none;
 }
 
+#done {
+    background-color: rgb(119, 87, 5);
+}
 
 .opt {
     display: flex;
@@ -257,9 +489,11 @@ button {
     50% {
         transform: translateX(-50px);
     }
+
     70% {
         transform: translateX(100px);
     }
+
     100% {
         transform: translateX(0px);
     }
@@ -282,18 +516,16 @@ button {
     background-color: rgba(240, 17, 17, 0.397);
 }
 
-.warning {
-    transition: 1s ease-in-out;
-    animation: warn 3s linear;
+.high {
+    transition: 0.7s ease-in-out;
+    color: green;
 }
 
-@keyframes warn {
-    to {
-        color: yellow;
-    }
+.low {
+    transition: 0.7s ease-in-out;
+    color: red;
 }
 
 .cont {
     display: none;
 }
-
