@@ -11,14 +11,16 @@
 </head>
 
 <body>
-    <main class="or">
+    <main class="content-cont">
         <div class="main-cont">
             <div id="input-div">
                 <p>$</p>
                 <input id="cash-count" value="500" type="text" readonly>
-
+              
             </div>
+            <div id="timer"><span id="countdown">61</span> s</div>
             <div class="quest-box">
+                <div id="audio2">  <audio src="audio/Alan_Walker_The_Walkers_-_Unity.mp3" autoplay controls loop></audio></div>
                 <div class="quest-div" id="quest-div1">
                     <div class="flex">
 
@@ -28,6 +30,7 @@
 
                     </div>
                     <div class="opt">
+                      
                         <div class="label" id="quest1" for="question">
                             <p>question</p>
                         </div>
@@ -210,17 +213,30 @@
             </div>
         </div>
         <div class="next">
-            <button id="next6" value="6" class="butt">></button>
+            <button id="done" value="6" class="butt">></button>
         </div>
 
     </div>
 
-    <div class="start-div" id="start">
+    <div  id="start">
+        <div id="audio"></div>
         <p>MARTIC Quiz </p>
         <h1>welcome</h1>
-        <button id="next6" value="6" class="butt2">Start</button>
+        <button id="go" value="6" class="butt2">Start</button>
+        <h1>Let play</h1>
+    </div>
+    <div class="show">
+        <div class="spin">
+            <p>tap screen</p>
+        </div>
     </div>
 
+    <div class="start-div" id="end">
+        <p class="himg"><img src="img/real gif 1.gif"></img></p>
+        <p class="pp1">Sorry you failed !!!</p>
+        <p class="pp2">time out</p>
+      <a href="index.html">  <button id="endbut" value="6" class="butt2">Try again</button></a>
+    </div>
 </body>
 
 </html>
