@@ -24,7 +24,7 @@ function value() {
         $("#endbut").text("Play again");
         $(".pp2").text("You earned $" + currentValue());
         $("#end").show();
-        $("#audio2").html('<audio src="audio/win.mp3" autoplay></audio>');
+        $("#audio2").html('<audio src="audio/win.mp3" autoplay loop></audio>');
 
     }
     else if (currentValue() <= 300) {
@@ -34,7 +34,7 @@ function value() {
         $("#endbut").text("Play again");
         $(".pp2").text("You earned $" + currentValue());
         $("#end").show();
-        $("#audio2").html('<audio src="audio/end.mp3" autoplay></audio>');
+        $("#audio2").html('<audio src="audio/end.mp3" autoplay loop></audio>');
 
     } else {
         $(".content-cont").hide();
@@ -43,7 +43,7 @@ function value() {
         $(".himg").html('<img src="img/real gif 2.gif" alt="calm face">');
         $(".pp2").text("You earned $" + currentValue());
         $("#end").show();
-        $("#audio2").html('<audio src="audio/end.mp3" autoplay></audio>');
+        $("#audio2").html('<audio src="audio/end.mp3" autoplay loop></audio>');
 
     }
 
@@ -72,7 +72,7 @@ function checkAmount() {
         $(".pp1").text("Sorry you failed");
         $(".pp2").text("Out of funds");
         $("#end").show();
-        $("#audio2").html('<audio src="audio/end.mp3" autoplay></audio>');
+        $("#audio2").html('<audio src="audio/end.mp3" autoplay loop></audio>');
 
     }
     else if (currentValue() < 250) {

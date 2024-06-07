@@ -1,4 +1,4 @@
-# _Martic Quiz_
+# _Martic Quiz App_
 
 #### This is a Quiz site to test your knowlege in  programming and also earn money
 
