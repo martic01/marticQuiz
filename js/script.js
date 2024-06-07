@@ -19,7 +19,7 @@ function value() {
 
     if (currentValue() >= 700) {
         $(".content-cont").hide();
-        $(".pp1").text("You are the best");
+        $(".pp1").text("KING of Riddles");
         $(".himg").html('<img src="img/real gif 3.gif" alt="happy face">');
         $("#endbut").text("Play again");
         $(".pp2").text("You earned $" + currentValue());
@@ -50,7 +50,7 @@ function value() {
 }
 
 function startTimer() {
-    let timeLeft = 61;
+    let timeLeft = 120;
     let timerInterval;
 
     timerInterval = setInterval(function () {
