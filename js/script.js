@@ -14,80 +14,88 @@ function removeCash() {
     return currentValue() - 100
 }
 
-function  value (){
+function value() {
 
 
-    if (currentValue() >= 700){
+    if (currentValue() >= 700) {
         $(".content-cont").hide();
         $(".pp1").text("You are the best");
         $(".himg").html('<img src="img/real gif 3.gif" alt="happy face">');
         $("#endbut").text("Play again");
-        $(".pp2").text("You earned $" + currentValue() );
+        $(".pp2").text("You earned $" + currentValue());
         $("#end").show();
+        $("#audio2").html('<audio src="audio/win.mp3" autoplay></audio>');
+
     }
-    else if(currentValue() <= 300){
+    else if (currentValue() <= 300) {
         $(".content-cont").hide();
         $(".himg").html('<img src="img/real gif 2.gif" alt="calm face">');
         $(".pp1").text("You escaped");
         $("#endbut").text("Play again");
-        $(".pp2").text("You earned $" + currentValue() );
+        $(".pp2").text("You earned $" + currentValue());
         $("#end").show();
-    }else{
+        $("#audio2").html('<audio src="audio/end.mp3" autoplay></audio>');
+
+    } else {
         $(".content-cont").hide();
         $(".pp1").text("You did well");
         $("#endbut").text("Play again");
         $(".himg").html('<img src="img/real gif 2.gif" alt="calm face">');
-        $(".pp2").text("You earned $" + currentValue() );
+        $(".pp2").text("You earned $" + currentValue());
         $("#end").show();
+        $("#audio2").html('<audio src="audio/end.mp3" autoplay></audio>');
+
     }
 
 }
 
 function startTimer() {
-    let timeLeft = 61; 
+    let timeLeft = 7;
     let timerInterval;
 
-    timerInterval = setInterval(function() {
-      if (timeLeft > 0) {
-        timeLeft--;
-        $('#countdown').text(timeLeft);
-      } else {
-        $(".content-cont").hide();
-        $("#end").show();
-        
-      }
-    }, 1000); 
-  }
+    timerInterval = setInterval(function () {
+        if (timeLeft > 0) {
+            timeLeft--;
+            $('#countdown').text(timeLeft);
+        } else {
+            $(".content-cont").hide();
+            $("#end").show();
 
-  function checkAmount() {
-    if (currentValue() <= 0){
+
+        }
+    }, 1000);
+}
+
+function checkAmount() {
+    if (currentValue() <= 0) {
         $(".content-cont").hide();
         $(".pp1").text("Sorry you failed");
-        $(".pp2").text("Out of funds" );
+        $(".pp2").text("Out of funds");
         $("#end").show();
-        console.log(currentValue())
-       }
-       else if ( currentValue() < 250){
+        $("#audio2").html('<audio src="audio/end.mp3" autoplay></audio>');
+
+    }
+    else if (currentValue() < 250) {
         $("#cash-count").addClass("low")
-       }
-       else if ( currentValue() >= 700){
+    }
+    else if (currentValue() >= 700) {
         $("#cash-count").addClass("high")
-       }
+    }
     else {
         $("#cash-count").removeClass("low")
         $("#cash-count").removeClass("high")
     }
-  }
- 
- 
+}
+
+
 
 
 $(document).ready(function () {
     console.log(currentValue())
 
-   
-  
-   
+
+
+
     $(".ans").click(function () {
         let answer = $(this).val()
         let index = $(".ans").index(this);
@@ -100,7 +108,7 @@ $(document).ready(function () {
             $("#audio2").html('<audio src="audio/correct-6033.mp3" autoplay></audio>');
 
         }
-        else{
+        else {
             $("#cash-count").val(removeCash())
             $(".ans").eq(0).addClass("correct")
             $(".ans").eq(index).addClass("wrong")
@@ -123,7 +131,7 @@ $(document).ready(function () {
             $("#next2").show()
             $("#audio2").html('<audio src="audio/correct-6033.mp3" autoplay></audio>');
         }
-        else{
+        else {
             $("#cash-count").val(removeCash())
             $(".ans2").eq(2).addClass("correct")
             $(".ans2").eq(index).addClass("wrong")
@@ -145,7 +153,7 @@ $(document).ready(function () {
             $("#next3").show()
             $("#audio2").html('<audio src="audio/correct-6033.mp3" autoplay></audio>');
         }
-        else{
+        else {
             $("#cash-count").val(removeCash())
             $(".ans3").eq(1).addClass("correct")
             $(".ans3").eq(index).addClass("wrong")
@@ -167,7 +175,7 @@ $(document).ready(function () {
             $("#next4").show()
             $("#audio2").html('<audio src="audio/correct-6033.mp3" autoplay></audio>');
         }
-        else{
+        else {
             $("#cash-count").val(removeCash())
             $(".ans4").eq(0).addClass("correct")
             $(".ans4").eq(index).addClass("wrong")
@@ -189,7 +197,7 @@ $(document).ready(function () {
             $("#next5").show()
             $("#audio2").html('<audio src="audio/correct-6033.mp3" autoplay></audio>');
         }
-        else{
+        else {
             $("#cash-count").val(removeCash())
             $(".ans5").eq(3).addClass("correct")
             $(".ans5").eq(index).addClass("wrong")
@@ -204,15 +212,15 @@ $(document).ready(function () {
         let answer = $(this).val()
         let index = $(".ans6").index(this);
 
-        if (answer === "2") {
+        if (answer === "4") {
             $(".ans6").eq(index).addClass("correct")
             $("#cash-count").val(addCash())
             $("#next6").show()
             $("#audio2").html('<audio src="audio/correct-6033.mp3" autoplay></audio>');
         }
-        else{
+        else {
             $("#cash-count").val(removeCash())
-            $(".ans6").eq(1).addClass("correct")
+            $(".ans6").eq(3).addClass("correct")
             $(".ans6").eq(index).addClass("wrong")
             $("#next6").show()
             $("#audio2").html('<audio src="audio/wrong-47985.mp3" autoplay></audio>');
@@ -232,7 +240,7 @@ $(document).ready(function () {
             $("#next7").show()
             $("#audio2").html('<audio src="audio/correct-6033.mp3" autoplay></audio>');
         }
-        else{
+        else {
             $("#cash-count").val(removeCash())
             $(".ans7").eq(2).addClass("correct")
             $(".ans7").eq(index).addClass("wrong")
@@ -247,12 +255,12 @@ $(document).ready(function () {
     $("#go").click(function () {
         $(".show").show();
         $("#start").hide();
-      
+
     });
     $("#start").click(function () {
         $("#audio").html('<audio src="audio/Alan_Walker_The_Walkers_-_Unity.mp3" autoplay loop></audio>');
         $(".audio").show();
-      
+
     });
 
     $(".show").click(function () {
@@ -262,52 +270,52 @@ $(document).ready(function () {
         startTimer();
     });
 
-   
+
 
     $(".butt").click(function () {
         let butNum = $(this).val()
         $(".butt").hide();
 
 
-        if ( butNum === "1") {
+        if (butNum === "1") {
             $("#quest-div2").show();
             $("#quest-div1").hide();
-        
+
 
         }
-        else if ( butNum === "2") {
+        else if (butNum === "2") {
             $("#quest-div3").show();
             $("#quest-div2").hide();
-            
+
 
         }
-        else if ( butNum === "3") {
+        else if (butNum === "3") {
             $("#quest-div4").show();
             $("#quest-div3").hide();
-            
+
 
         }
-        else if ( butNum === "4") {
+        else if (butNum === "4") {
             $("#quest-div5").show();
             $("#quest-div4").hide();
-            
+
 
         }
-        else if ( butNum === "5") {
+        else if (butNum === "5") {
             $("#quest-div6").show();
             $("#quest-div5").hide();
-            
+
 
         }
-        else if ( butNum === "6") {
+        else if (butNum === "6") {
             $("#quest-div7").show();
             $("#quest-div6").hide();
-            
+
 
         }
 
-        else if ( butNum === "7") {
-           value();
+        else if (butNum === "7") {
+            value();
 
         }
 

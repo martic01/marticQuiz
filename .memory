@@ -1,0 +1,27 @@
+
+
+function navigate(direction) {
+    let currentIndex = $(".page").index($(".current-page"));
+    let nextPageIndex;
+
+    if (direction === "next") {
+        nextPageIndex = currentIndex + 1;
+    } else if (direction === "previous") {
+        nextPageIndex = currentIndex - 1;
+    }
+
+    $(".page").removeClass("current-page"); // Remove current page class from all pages
+    $(".page").eq(nextPageIndex).addClass("current-page"); // Add current page class to the next or previous page
+}
+
+$(document).ready(function() {
+    $("#nextbutton").click(function() {
+        navigate("next");
+    });
+
+    $("#previousbutton").click(function() {
+        navigate("previous");
+    });
+});
+
+https://tenor.com/search/emoji-sad-gifs

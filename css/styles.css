@@ -55,14 +55,15 @@ body {
 #audio:hover audio {
     display: block;
 }
-#audio2{
-display: none;
+
+#audio2 {
+    display: none;
 }
 
 audio {
     margin-left: -40px;
     background-color: red;
-    
+
 }
 
 #timer {
@@ -375,8 +376,10 @@ img {
 }
 
 .label {
-    padding-top: 10px;
-    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
     font-weight: 800;
     width: 100%;
     height: 60%;
@@ -421,8 +424,8 @@ img {
 }
 
 button {
-    font-size: 15px;
-    font-weight: 900;
+    font-size: 20px;
+    font-weight: 800;
     width: 45%;
     border-radius: 30%;
     border: none;
