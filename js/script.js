@@ -70,7 +70,7 @@ function checkAmount() {
     if (currentValue() <= 0) {
         $(".content-cont").hide();
         $(".pp1").text("Sorry you failed");
-        $(".pp2").text("Out of funds");
+        $(".pp2").text("Out of funds")
         $("#end").show();
         $("#audio2").html('<audio src="audio/end.mp3" autoplay loop></audio>');
 
