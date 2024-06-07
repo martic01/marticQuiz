@@ -20,7 +20,7 @@ The Coding Quiz App is a simple yet powerful tool designed to help users practic
 * Multiple Choice Questions: The app offers a wide range of multiple-choice questions covering fundamental and advanced topics in programming.
 * Dynamic Quizzes: Users can choose from different options .
 + Real-Time Feedback: Immediate feedback is provided after all question as been answered, allowing users to track their progress and identify areas for improvement by displaing how well they did after the game.
-* funds Tracking: The app keeps record of funds earn and pays after game is over.
+* funds Tracking: The app keeps record of funds earned and pays after game is over.
 
 ## Setup/Installation Requirements
 

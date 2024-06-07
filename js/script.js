@@ -50,7 +50,7 @@ function value() {
 }
 
 function startTimer() {
-    let timeLeft = 7;
+    let timeLeft = 61;
     let timerInterval;
 
     timerInterval = setInterval(function () {
