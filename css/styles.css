@@ -23,6 +23,10 @@ button {
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 height: 800px;
 background-color: rgb(221, 218, 218);
 }
@@ -156,7 +160,7 @@ audio {
     width: 120px;
     margin: auto;
     border-radius: 60px;
-    color: white;
+    color: black;
 
     animation: spin 4s linear forwards;
 }
@@ -379,7 +383,7 @@ img {
     font-size: 30px;
     font-weight: 800;
     height: 30%;
-    color: rgb(238, 234, 234);
+    color:black;
 }
 
 .label {
