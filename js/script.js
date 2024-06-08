@@ -260,6 +260,7 @@ $(document).ready(function () {
     $("#start").click(function () {
         $("#audio").html('<audio src="audio/Alan_Walker_The_Walkers_-_Unity.mp3" autoplay loop></audio>');
         $(".audio").show();
+        $("body").addClass("body1");
 
     });
 
