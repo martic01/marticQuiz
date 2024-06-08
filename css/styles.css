@@ -23,7 +23,6 @@ button {
 }
 
 body {
-
     background-color: rgb(27, 25, 25);
 }
 .body1{
@@ -237,7 +236,6 @@ audio {
 }
 
 .content-cont {
-    margin-top: 500px;
     padding-top: 40px;
     background-color: transparent;
     height:100%;
