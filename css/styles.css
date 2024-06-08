@@ -240,6 +240,7 @@ audio {
 }
 
 .content-cont {
+    margin-top: 500px;
     padding-top: 40px;
     background-color: transparent;
     height:100%;
