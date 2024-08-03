@@ -104,7 +104,7 @@ $(document).ready(function () {
         if (answer === "1") {
             $(".ans").eq(index).addClass("correct")
             $("#cash-count").val(addCash())
-            $("#next1").show()
+             $("#next1").show()
             $("#audio2").html('<audio src="audio/correct-6033.mp3" autoplay></audio>');
 
         }
@@ -142,8 +142,8 @@ $(document).ready(function () {
         $(".ans2").prop("disabled", true);
         checkAmount()
     });
-
-    $(".ans3").click(function () {
+ 
+   $(".ans3").click(function () {
         let answer = $(this).val()
         let index = $(".ans3").index(this);
 
