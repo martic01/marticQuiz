@@ -70,7 +70,7 @@ function checkAmount() {
     if (currentValue() <= 0) {
         $(".content-cont").hide();
         $(".pp1").text("Sorry you failed");
-        $(".pp2").text("Out of funds");
+        $(".pp2").text("Out of funds")
         $("#end").show();
         $("#audio2").html('<audio src="audio/end.mp3" autoplay loop></audio>');
 
@@ -104,7 +104,7 @@ $(document).ready(function () {
         if (answer === "1") {
             $(".ans").eq(index).addClass("correct")
             $("#cash-count").val(addCash())
-            $("#next1").show()
+             $("#next1").show()
             $("#audio2").html('<audio src="audio/correct-6033.mp3" autoplay></audio>');
 
         }
@@ -142,8 +142,8 @@ $(document).ready(function () {
         $(".ans2").prop("disabled", true);
         checkAmount()
     });
-
-    $(".ans3").click(function () {
+ 
+   $(".ans3").click(function () {
         let answer = $(this).val()
         let index = $(".ans3").index(this);
 
@@ -260,6 +260,7 @@ $(document).ready(function () {
     $("#start").click(function () {
         $("#audio").html('<audio src="audio/Alan_Walker_The_Walkers_-_Unity.mp3" autoplay loop></audio>');
         $(".audio").show();
+        $("body").addClass("body1");
 
     });
 
